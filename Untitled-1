@@ -1,0 +1,37 @@
+// if (currentInstalledReleaseId != null) {
+        //     val currentInstalledRelease =
+        //         releaseService.findReleaseByIdAndType(
+        //             currentInstalledReleaseId
+        //         ).orElse(null)
+        //
+        //     if (currentInstalledRelease == null) {
+        //         log.info {
+        //             "Current OTA release not found. Cannot apply downgrade protection. " +
+        //                 "[ReleaseId: $currentInstalledReleaseId]"
+        //         }
+        //     } else if (shouldSkipDowngradeProtection(currentInstalledRelease)) {
+        //         log.info {
+        //             "Skipping OTA downgrade protection. " +
+        //                 "[ReleaseId: $currentInstalledReleaseId]"
+        //         }
+        //     } else {
+        //         val currentReleaseMatched = matchedReleases.any { it.id == currentInstalledReleaseId }
+        //
+        //         val releasesForCutoff = if (currentReleaseMatched) { matchedReleases } else {
+        //                 log.debug { "Current installed OTA release not in matched releases. " + "Injecting release for cutoff calculation. " + "[ReleaseId: $currentInstalledReleaseId]" }
+        //
+        //                 ReleaseVersionHelper.sortByReleaseVersion(matchedReleases + currentInstalledRelease).filterIsInstance<Release>() }
+        //
+        //         val currentIndex = releasesForCutoff.indexOfFirst { it.id == currentInstalledReleaseId }
+        //
+        //         if (currentIndex >= 0) {
+        //             log.debug { "Applying OTA downgrade cutoff at index $currentIndex " + "for release $currentInstalledReleaseId" }
+        //
+        //             sortedReleaseEntities = releasesForCutoff.subList(0, currentIndex + 1)
+        //
+        //             if (!currentReleaseMatched && sortedReleaseEntities.size > 1) {
+        //                 log.debug { "Removing injected OTA release from final result. " + "[ReleaseId: $currentInstalledReleaseId]" }
+        //                 sortedReleaseEntities = sortedReleaseEntities.dropLast(1) }
+        //         }
+        //     }
+        // }

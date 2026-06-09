@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(curl -s http://localhost:8080/mbux)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}
